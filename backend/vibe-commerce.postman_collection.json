@@ -1,0 +1,60 @@
+{
+    "info": {
+      "name": "Vibe Commerce Backend Tests",
+      "_postman_id": "vibe-commerce-tests",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "GET Products",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": "http://localhost:5000/api/products"
+        }
+      },
+      {
+        "name": "POST Add to Cart",
+        "request": {
+          "method": "POST",
+          "header": [{ "key": "Content-Type", "value": "application/json" }],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"productId\":1, \"qty\":2}"
+          },
+          "url": "http://localhost:5000/api/cart"
+        }
+      },
+      {
+        "name": "GET Cart",
+        "request": {
+          "method": "GET",
+          "url": "http://localhost:5000/api/cart"
+        }
+      },
+      {
+        "name": "DELETE Cart Item",
+        "request": {
+          "method": "DELETE",
+          "url": {
+            "raw": "http://localhost:5000/api/cart/{{itemId}}",
+            "host": ["http://localhost:5000"],
+            "path": ["api", "cart", "{{itemId}}"]
+          }
+        }
+      },
+      {
+        "name": "POST Checkout",
+        "request": {
+          "method": "POST",
+          "header": [{ "key": "Content-Type", "value": "application/json" }],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"cartItems\":[]}"
+          },
+          "url": "http://localhost:5000/api/checkout"
+        }
+      }
+    ]
+  }
+  

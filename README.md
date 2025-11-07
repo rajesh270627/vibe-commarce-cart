@@ -1,70 +1,96 @@
+# 🛒 Vibe Commerce – Mock E-Commerce Cart (Full Stack Assignment)
 
-# 🛒 Vibe Commerce – Mock E-Com Cart (Full Stack Assignment)
+A full-stack shopping cart built for the Vibe Commerce internship assignment.  
+Supports products listing, add/remove cart, totals, and mock checkout.
 
-A full-stack shopping cart built for the Vibe Commerce internship assignment.
-Supports listing products, adding/removing from cart, totals, and mock checkout.
+---
 
-✅ **Tech Stack**
-- **Frontend:** React (Axios, Bootstrap, Router)
-- **Backend:** Node.js + Express
-- **Database:** MySQL (persistence)
-- **Bonus:** Error handling + Fake Store API toggle
+## ✅ Tech Stack
+- **Frontend:** React, Axios, Bootstrap, React Router
+- **Backend:** Node.js, Express.js
+- **Database:** MySQL (persistent cart & products)
+- **Bonus Features:** Error handling, Fake Store API toggle
 
 ---
 
 ## ✅ Features
 
-✔ Product listing (grid)  
+✔ Product listing with images  
 ✔ Add to Cart  
 ✔ Remove from Cart  
-✔ Cart page with total  
-✔ Checkout – receipt with timestamp  
-✔ Responsive UI  
-✔ Real images for products  
-✔ Persistent MySQL DB storage  
+✔ Cart view with calculated total  
+✔ Checkout with receipt + timestamp  
+✔ Mobile responsive layout  
+✔ MySQL-based data persistence  
 ✔ Bonus: Fake Store API mode
 
 ---
+
 ## ✅ Folder Structure
+
 /backend
 ├─ server.js
 ├─ db.js
-├─ routes/
+└─ routes/
+
 /frontend
 ├─ src/
 ├─ public/images/
+└─ package.json
 
 
 ---
 
+
 ## ✅ How to Run (Local Setup)
 
-### 1️⃣ Backend
+### ✅ 1️⃣ Backend Setup
 
-``bash
+```bash
 cd backend
 npm install
 node server.js
-http://localhost:5000
 
+Backend will run at:
+👉 http://localhost:5000/
+
+✅ 2️⃣ Frontend Setup
 cd frontend
 npm install
 npm start
-http://localhost:3000
-
-| Method | Route           | Description                     |
-| ------ | --------------- | ------------------------------- |
-| GET    | `/api/products` | Get product list                |
-| POST   | `/api/cart`     | Add item                        |
-| GET    | `/api/cart`     | View cart & total               |
-| DELETE | `/api/cart/:id` | Remove item                     |
-| POST   | `/api/checkout` | Mock checkout – returns receipt |
 
 
+Frontend will run at:
+👉 http://localhost:3000/
 
+| Method | Route           | Description                |
+| ------ | --------------- | -------------------------- |
+| GET    | `/api/products` | Fetch all products         |
+| POST   | `/api/cart`     | Add item to cart           |
+| GET    | `/api/cart`     | View items in cart + total |
+| DELETE | `/api/cart/:id` | Remove item from cart      |
+| POST   | `/api/checkout` | Checkout → returns receipt |
 
+✅ API Usage (cURL Examples)
+✅ Get Products
+curl http://localhost:5000/api/products
+
+curl -X POST http://localhost:5000/api/cart \
+  -H "Content-Type: application/json" \
+  -d "{\"productId\": 1, \"qty\": 2}"
+curl http://localhost:5000/api/cart
+
+curl -X DELETE http://localhost:5000/api/cart/1
+
+curl -X POST http://localhost:5000/api/checkout
+
+✅ Demo Video
+
+(Insert Loom / YouTube unlisted link here)
+
+✅ Author
 
 Name: Rajesh Parikapalli
 Email: parikapallirajeshgoud@gmail.com
 
-Github: https://github.com/rajesh270627
+GitHub: https://github.com/rajesh270627

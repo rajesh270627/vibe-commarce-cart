@@ -109,7 +109,7 @@ https://fakestoreapi.com/products
 ![Product Page](./Screenshots/products.png)
 
 ### 🛒 Cart Page
-![Cart Page](./Screenshots/cart.png)
+![Cart Page](./Screenshots/Cart.png)
 
 ### ✅ Checkout Page
 ![Checkout Page](./Screenshots/checkout.png)

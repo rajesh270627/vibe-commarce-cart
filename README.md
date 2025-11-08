@@ -103,6 +103,17 @@ FAKE_API=true
 Then `/api/products` will return data from:
 https://fakestoreapi.com/products
 
+## 📸 Project Screenshots
+
+### 🛍️ Product Page
+![Product Page](./Screenshots/products.png)
+
+### 🛒 Cart Page
+![Cart Page](./Screenshots/cart.png)
+
+### ✅ Checkout Page
+![Checkout Page](./Screenshots/checkout.png)
+
 ## 📽️ Demo Video
 (Insert Loom / YouTube unlisted link here)
 
